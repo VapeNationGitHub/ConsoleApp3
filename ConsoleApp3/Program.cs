@@ -16,7 +16,6 @@ namespace Collections
             link.AddFirst("B");
             link.AddFirst("C");
             link.AddFirst("D");
-
             // Отобразим элементы
             LinkedListNode<string> node;
             RepeatWord1:
@@ -111,14 +110,14 @@ namespace Collections
                 Console.WriteLine("\n\nЭлементы коллекции: ");
                 for (node1 = link1.Last; node1 != null; node1 = node1.Previous)
                     Console.Write(node1.Value + "\t");
+                Console.WriteLine("Продолжайте обучение, чтобы не забыть слова!");
+                goto RepeatWord1;
             }
             else
             {
                 Console.WriteLine("Четвертое слово введено не правильно, возвращаетесь к третьему слову!");
                 goto RepeatWord3;
             }
-
-            Console.ReadLine();
         }
     }
 }
